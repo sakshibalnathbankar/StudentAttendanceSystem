@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url("https://fonts.googleapis.com/css?family=Bree Serif");
+@import url("https://fonts.googleapis.com/css?family=Calistoga");
+@import url("https://fonts.googleapis.com/css?family=Noto Serif");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------------NAVBAR---------------------------------------------------*/
+
+nav {
+  height: 100px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px 0px 100px;
+  font-family: "Open Sans", sans-serif;
+}
+nav .logo {
+  margin-left: -72px;
+  display: flex;
+  font-size: 26px;
+  color: white;
+}
+nav.logo.active{
+  position: fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+}
+
+nav .logo h4 {
+  margin: 10px;
+  font-weight: 100;
+}
+nav .logo img {
+  height: 50px;
+  width: 60px;
+  margin-top: 5px;
+  filter: invert(100%);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 7px 7px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background: white;
+  color: black;
+}
+nav ul li {
+  margin: 0 7px;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+#click:checked ~ .menu-btn i::before {
+  content: "\f00d";
+}
+#click {
+  display: none;
+}
+#click:checked ~ ul {
+  left: 0%;
+}
+@media (max-width: 940px) {
+  nav ul {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    background-color: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: none;
+    color: cyan;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+}
+
+/*----------------------------------------------HOME PAGE STYLE----------------------------------------------------*/
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  filter: blur(0.5px);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+.process-content {
+  display: flex;
+  flex-direction: column;
+  background: #f5f3e1;
+  width: 100%;
+}
+.process-title {
+  margin-top: 30px;
+  left: 550px;
+  right: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  color: rgb(8, 8, 51);
+}
+.box-area {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.single-box {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: -750px;
+  padding: 5px;
+  transition: 0.3s;
+  border-radius: 50%;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background: rgb(255, 255, 255);
+}
+
+.single-box:hover {
+  -webkit-box-shadow: -1px 9px 40px -12px rgb(0, 0, 0);
+  -moz-box-shadow: -1px 9px 40px -12px rgba(0, 0, 0);
+  box-shadow: -1px 9px 40px -12px rgba(0, 0, 0);
+  transform: translate(0, -10px);
+  transform: translate(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+.img-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #f9e79f;
+  border-radius: 50%;
+  margin-bottom: -10px;
+  padding: 10px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 6px 5px rgb(100, 95, 95);
+  -moz-border-radius: 190px;
+  -webkit-border-radius: 190px;
+  transition: 1s;
+}
+
+.box-area .single-box:nth-child(1):hover .img-area {
+  box-shadow: 0 0 0 290px #f9e79f;
+}
+
+.img-text{
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Poppins";
+}
+
+
+.button {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  margin-left: 100px;
+  justify-content: center;
+}
+.btn-1 {
+  border: none;
+  background: rgb(86, 116, 116);
+  color: #ffffff !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  font-weight: 100;
+  padding: 20px;
+  border-radius: 6px;
+  display: inline;
+  transition: all 0.3s ease 0s;
+  margin: 20px;
+}
+.btn-1:hover {
+  background-color: #c6fce7 !important;
+
+  color: black !important;
+  font-weight: 200;
+  letter-spacing: 2px;
+  background: none;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+
+
+/*----------------------------------------------FOOTER---------------------------------------------------*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+.container .row .footer-col ul {
+  list-style: none;
+}
+footer {
+  background-color: #24262b;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.footer-col {
+  width: 33.33%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 70px;
+}
+.footer-col ul li a {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 4px;
+}
+
+.footer-col p {
+  color: #bbbbbb;
+  align-self: auto;
+}
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .footer-col {
+    width: 100%;
+  }
+}
