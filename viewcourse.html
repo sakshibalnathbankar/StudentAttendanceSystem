@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <title>View Course</title>
+    <link rel="stylesheet" href="css/viewcourse.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favlogo.webp"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    a {
+      position: relative;
+      font-size: 22px;
+      font-weight: 100;
+      color: rgb(114, 28, 114);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @media screen and (max-width: 900px) {
+      a {
+        font-size: 17px;
+      }
+    }
+  </style>
+  <body>
+    <div class="back-button">
+      <a href="info.html">
+        <img src="images/back.png" alt="" />
+      </a>
+    </div>
+    <div class="container" id="myDiv">
+      <h1>View Course</h1>
+
+      <form action="display.php" method="POST">
+        
+        <div class="form-row">
+          <div class="input-data">
+            <input type="text" name="t" required />
+            <div class="underline"></div>
+            <label for="t">Enter your Teacher_Id</label>
+          </div>
+        </div>
+       
+
+        <div class="form-row submit-btn center-align">
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="submit" value="View Course" name="submit" onclick="changeStyle()"/>
+          </div>
+          <div class="input-data">
+            <div class="inner"></div>
+            <input type="reset" value="Reset" />
+          </div>
+        </div>
+       
+      </form>
+    </div>
+  </body>
+</html>
