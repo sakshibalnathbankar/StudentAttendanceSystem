@@ -5,3 +5,4 @@ FrontEnd : HTML, CSS, Javascript
 Backend  : PHP
 Database : MYSQL
 The Execution of the project begins from index.php.
+The information related to database i.e tablename and their schemas is provided in database_info.docx
