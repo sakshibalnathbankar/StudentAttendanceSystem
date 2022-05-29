@@ -268,7 +268,7 @@ if (isset($_POST['btnsubmit'])) {
 		</tr>
 		<tr>
 			<td>
-				<h3 style="color:red;">* Check the box for Present student
+				<h3 style="color:red;">* Uncheck the box for Absent student
 				</h3>
 				<div align="center">
 					<?php
